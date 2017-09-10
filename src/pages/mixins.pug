@@ -1,0 +1,19 @@
+
+mixin avatar
+    .avatar
+        img(src=require("./my_photo.jpg") title="Кривда Ярослав - Frontend developer" alt="Кривда Ярослав - Frontend developer")
+
+//social links on index page
+mixin social_links(style)
+    ul.social-links
+        -
+            var socials = {
+            "vk" : "http://vk.com/id5593980",
+            "github-alt" : "https://github.com/Kry-dev",
+            "instagram" : "https://www.instagram.com/yarikkrivda/",
+            "linkedin" : "https://ru.linkedin.com/in/aroslav-kryvda-32b88485/"
+            };
+        each s_url, s_name in socials
+            li(class="social-links__item" + ((style) ? " social-links__item_#{style}" : ""))
+                a(class="social-links__link fa fa-" + s_name, href=s_url, target="_blank")
+

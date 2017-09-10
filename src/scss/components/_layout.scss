@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+ul,
+ul li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+}
+a{
+  text-decoration: none;
+  color: $link--color;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+html, body {
+  height: 100%;
+  font-size: 16px;
+  font-weight: normal;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  .main{
+    display: flex;
+    flex: 1;
+  }
+}
+header{
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
