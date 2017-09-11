@@ -7,8 +7,6 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // const StyleLintPlugin = require('stylelint-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-
-
 const PATHS = {
   source: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'build'),
@@ -20,7 +18,6 @@ module.exports = {
     'works': PATHS.source + '/pages/works/works.js',
     'about': PATHS.source + '/pages/about/about.js',
     'blog': PATHS.source + '/pages/blog/blog.js',
-
   },
   output: {
     path: PATHS.build,
@@ -101,10 +98,18 @@ module.exports = {
             outputPath: './img/'
         },
       },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        loader : 'file-loader',
-      },
+        {
+          test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+          use: [
+            {
+              loader: 'file-loader',
+              query: {
+                  name:'fonts/[name].[ext]'
+              }
+            }
+          ]
+        },
+
     ],
   },
 };

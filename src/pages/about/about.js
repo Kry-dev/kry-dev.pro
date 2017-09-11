@@ -1,5 +1,5 @@
 import 'normalize.css';
-import '../../scss/pages/about.scss';
+import './about.scss';
 
 console.log('in about.js');
 

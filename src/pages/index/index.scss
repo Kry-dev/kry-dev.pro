@@ -30,6 +30,7 @@
       padding: 2.25em;
       &__name{
         font-size: 1.75em;
+        font-family: 'Roboto-Medium';
         color: $white;
         line-height: 1;
         text-align: center;
@@ -37,6 +38,7 @@
       }
       &__description{
         font-size: 1em;
+        font-family: 'Roboto';
         color: opacify($white,.8);
         line-height: 1;
         text-align: center;
@@ -57,14 +59,14 @@
       }
     }
     .social-links{
-      display: block;
+      display: flex;
       width: 100%;
       margin: 0;
       padding: 0;
       position: relative;
       z-index: 5;
       .social-links__item{
-        display: block;
+        display: flex;
         margin-right: 10px;
         text-align: center;
         &:last-child{
@@ -82,7 +84,7 @@
     width: 100%;
     flex: 1 1 auto;
     li.welcome-nav__item{
-      display: block;
+      display: flex;
       margin: 0;
       padding: 0;
       width: 100%;
@@ -91,7 +93,7 @@
         border: none;
       }
       .btn{
-        display: block;
+        display: flex;
         text-align: center;
         width: 100%;
         background: transparentize($light-green, 0.15);

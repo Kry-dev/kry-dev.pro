@@ -1,11 +1,14 @@
 .btn{
-  display: block;
+  display: flex;
+  font-family:'Roboto-Medium';
   font-size: 16px;
   color: $btn--text-color;
   background: $btn--bg-color;
   border: 1px solid $btn--border-color;
   padding: 1em;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
   &:hover{
     background: $btn--hover-bg-color;
     text-decoration: none;
