@@ -1,5 +1,6 @@
 import 'normalize.css';
-import '../about/about.scss';
+import './works.scss';
+require('font-awesome/css/font-awesome.css');
 
 console.log('in works.js');
 

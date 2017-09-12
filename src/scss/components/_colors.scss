@@ -1,5 +1,6 @@
-//colors
-
+// =================================
+//	colors
+// =================================
 $white: #fff;
 $black: #000;
 $green: #4a8139;
@@ -12,23 +13,33 @@ $light: #f0efe9;
 $blue: #6da3bd;
 $transparent: rgba(0,0,0,.0);
 
+// =================================
 //main text colors
+// =================================
 $text--color: $grey;
 $akcent--text-color: $green;
 
+// =================================
 //main background colors
+// =================================
 $block-bg-transparent: rgba(18,38,32,.6);
 
+// =================================
 //main title colors
+// =================================
 $title--dark-color: $dark-grey;
 $title--light-color: $white;
 $subtitle--dark-color: $grey;
 $subtitle--light-color: $white;
 
+// =================================
 //defaul link colors
+// =================================
 $link--color: $blue;
 
-//FROMS
+// =================================
+//FORMS
+// =================================
 //input-main-colors
 $input--bg-color: $white;
 $input--text-color: $light-grey;
@@ -47,14 +58,17 @@ $input--error-border-color: $input--icon-error;
 $checkbox--color: $input--bg-color;
 $checkbox--active-color: $light-green;
 
-
+// =================================
 //button-colors
+// =================================
 $btn--text-color: $white;
 $btn--bg-color: $light-green;
 $btn--hover-bg-color: $green;
 $btn--bg-transparent: $transparent;
 $btn--border-color: $transparent;
 $btn--bg-transparent-border: $white;
+
+
 
 
 

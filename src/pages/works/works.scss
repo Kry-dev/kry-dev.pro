@@ -1,2 +1,10 @@
-h1{
-  color: #000;}
+@import '../../scss/base';
+.works-wrapper{
+	background: url("./welcome_bg.jpg") no-repeat;
+	background-size: cover;
+}
+.works-header{
+	justify-content: flex-end;
+	.menu-button{
+	}
+}
