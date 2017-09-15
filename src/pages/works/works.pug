@@ -37,9 +37,18 @@ block content
                 .portfolio-slider__preview-container
                     img(src=require("./work-1.png") alt="work1").portfolio-preview
                 .portfolio-slider__navigation-container
-                    .navigation-box.navigation-box_prev 1
-                    .navigation-box.navigation-box_next 2
-
+                    .navigation-box.navigation-box_prev
+                        button.portfolio-button.portfolio-button__prev
+                            span.fa.fa-chevron-down
+                        .portfolio-thumbnails
+                            .portfolio-thumbnails__item
+                                img(src=require("./thumbnails-item.jpg") alt="previev work")
+                    .navigation-box.navigation-box_next
+                        button.portfolio-button.portfolio-button__next
+                            span.fa.fa-chevron-up
+                        .portfolio-thumbnails
+                            .portfolio-thumbnails__item
+                                img(src=require("./thumbnails-item-2.jpg") alt="previev work")
 
         //footer.welcome-footer
         //    .copyright © Кривда Ярослав
