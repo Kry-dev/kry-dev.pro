@@ -11,8 +11,18 @@ ul li{
 a{
   text-decoration: none;
   color: $link--color;
+  cursor: pointer;
   &:hover{
     text-decoration: underline;
+  }
+}
+button{
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  background: none;
+  &:focus{
+    outline: none;
   }
 }
 html, body {
@@ -36,12 +46,28 @@ header{
   width: 100%;
   padding: 20px;
 }
-h1{
-  font-size: 3.9375em;
+h1,h2,h3,h4,h5{
   font-family: 'Sansus-Webissimo';
   color: $dark-grey;
   line-height: 1;
   font-weight: 400;
   text-align: center;
   margin: 0;
+  text-transform: uppercase;
+  position: relative;
+}
+h1{
+  font-size: 3.9375em;
+
+}
+h3{
+  font-size: 2.1815em;
+}
+p{
+  font-family:'Roboto-Medium';
+  font-size: 1em;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+
 }

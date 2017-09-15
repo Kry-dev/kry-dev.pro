@@ -74,4 +74,68 @@
 	min-height: 650px;
 	overflow: hidden;
 	background: $light-green;
+	flex-direction: row;
+	&__module{
+		width: 50%;
+		height: 100%;
+	}
+	.portfolio-projects{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		.project{
+			display: flex;
+			width: 100%;
+			height: 100%;
+			padding: 5% 10%;
+			justify-content: center;
+			align-items: center;
+			&__inner {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			&__title{
+				text-align: center;
+				color: $green-grey;
+				margin-bottom: 1em;
+				@include title-underline;
+				&:after {
+					background: $green-grey;
+				}
+			}
+			&__tech-box{
+				display: flex;
+				width: 100%;
+				flex-direction: row;
+				justify-content: center;
+				margin: 0 auto 2em;
+				.skill-tag{
+					margin-right: 5px;
+					text-align: center;
+					text-transform: uppercase;
+					color: $akcent--text-color;
+				}
+			}
+			&__link{
+				display: flex;
+				font-size: 1em;
+				line-height: 1;
+				text-align: center;
+				padding: 1em 2em;
+				border-radius: 1.5em;
+				background-color: $green;
+				color: $white;
+				&:hover,
+				&:active{
+					background: $dark-green;
+					text-decoration: none;
+				}
+				.fa{
+					margin-right: 10px;
+				}
+			}
+		}
+	}
 }

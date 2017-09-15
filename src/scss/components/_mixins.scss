@@ -15,21 +15,24 @@
   }
 }
 
+@mixin title-underline{
+  &:after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 10%;
+    bottom: -.5em;
+    left: 50%;
+    margin-left: -5%;
+    background: $dark-grey;
+  }
+}
 //page title
 @mixin page-title{
   .page-title{
     text-transform: uppercase;
     padding: 0 1em;
     position: relative;
-    &:after{
-      content: '';
-      position: absolute;
-      height: 5px;
-      width: 10%;
-      bottom: -.5em;
-      left: 50%;
-      margin-left: -5%;
-      background: $dark-grey;
-    }
+    @include title-underline;
   }
 }
