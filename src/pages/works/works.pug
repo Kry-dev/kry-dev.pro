@@ -5,11 +5,17 @@ block head
 block content
     .wrapper.works-wrapper
         header.works-header
-            +social_links
-            button#menu-toggle.menu-button
-                span.menu-button__line
+            .works-header__top
+                +social_links
+                button#menu-toggle.menu-button
+                    span.menu-button__line
+            .site_author
+                +avatar
+                p.site_author__name Кривда Ярослав
+                p.site_author__description Личный сайт веб разработчика
 
         section.main.works-main
+
 
         footer.welcome-footer
             .copyright © Кривда Ярослав
