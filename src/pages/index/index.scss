@@ -8,6 +8,9 @@
   .btn{
     border-radius: 1.5em;
     padding: 1em 2em;
+    &:focus{
+      outline: none;
+    }
   }
 }
 .welcome-main{
@@ -65,9 +68,9 @@
         display: flex;
         text-align: center;
         width: 100%;
-        background: transparentize($light-green, 0.15);
+        background: transparentize($green, 0.15);
         &:hover{
-          background: transparentize($green, 0.15);
+          background: transparentize($dark-green, 0.15);
         }
       }
     }

@@ -3,8 +3,9 @@
 // =================================
 $white: #fff;
 $black: #000;
-$green: #4a8139;
-$light-green: #6c9c5a;
+$dark-green: #4a8139;
+$green: #6c9c5a;
+$light-green: #ebefe2;
 $light-grey: #c4cbcd;
 $grey: #566358;
 $dark-grey: #373e42;
@@ -33,7 +34,7 @@ $subtitle--dark-color: $grey;
 $subtitle--light-color: $white;
 
 // =================================
-//defaul link colors
+//default link colors
 // =================================
 $link--color: $blue;
 
@@ -47,7 +48,7 @@ $input--hover-text-color: $dark-grey;
 $input--error-text-color: $light-grey;
 //input-icons-color
 $input--icon: $light-grey;
-$input--icon-hover: $green;
+$input--icon-hover: $dark-green;
 $input--icon-error: $red;
 $input--icon-bg: $light;
 //input-border-color
@@ -62,8 +63,8 @@ $checkbox--active-color: $light-green;
 //button-colors
 // =================================
 $btn--text-color: $white;
-$btn--bg-color: $light-green;
-$btn--hover-bg-color: $green;
+$btn--bg-color: $green;
+$btn--hover-bg-color: $dark-green;
 $btn--bg-transparent: $transparent;
 $btn--border-color: $transparent;
 $btn--bg-transparent-border: $white;
