@@ -1,0 +1,57 @@
+extends ../base
+
+block head
+
+block content
+    .wrapper.works-wrapper
+        header.works-header
+            .works-header__top
+                +social_links
+                button#menu-toggle.menu-button
+                    span.menu-button__line
+            .site_author
+                +avatar
+                p.site_author__name Кривда Ярослав
+                p.site_author__description Личный сайт веб разработчика
+            svg.header__svg-bg
+                //use(xlink:href="#icon-portfolio_header")
+            .header-title-box
+                .header-box__title
+                    h1.page-title Мои работы
+
+        section.portfolio-slider
+            ul.portfolio-projects
+                li.project
+                    .project__inner
+                        h3.project__title Сайт школы онлайн Образования
+                        p.project__tech-box
+                            span.skill-tag HTML,
+                            span.skill-tag CSS,
+                            span.skill-tag JavaScript
+                        a.project__link
+                            i.fa.fa-link
+                            p Перейти на сайт
+
+            .portfolio-slider__previev
+                .portfolio-slider__preview-photo-box
+                    img(src=require("./work-1.png") alt="work1").portfolio-preview
+            .portfolio-slider__navigation
+                .navigation-box.navigation-box_prev
+                    button.portfolio-button.portfolio-button__prev
+                        span.fa.fa-chevron-down
+                    .portfolio-thumbnails
+                        .portfolio-thumbnails__item
+                            img(src=require("./thumbnails-item.jpg") alt="previev work")
+                .navigation-box.navigation-box_next
+                    button.portfolio-button.portfolio-button__next
+                        span.fa.fa-chevron-up
+                    .portfolio-thumbnails
+                        .portfolio-thumbnails__item
+                            img(src=require("./thumbnails-item-2.jpg") alt="previev work")
+
+        //footer.welcome-footer
+        //    .copyright © Кривда Ярослав
+        //    .copyright Front-end developer
+        //    .copyright 2017
+
+

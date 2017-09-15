@@ -1,0 +1,82 @@
+// =================================
+//	colors
+// =================================
+$white: #fff;
+$black: #000;
+$dark-green: #4a8139;
+$green: #6c9c5a;
+$light-green: #ebefe2;
+$light-grey: #c4cbcd;
+$grey: #566358;
+$dark-grey: #373e42;
+$red: #e44845;
+$light: #f0efe9;
+$blue: #6da3bd;
+$green-grey: #566358;
+$light-green-grey: #b0b7aa;
+$light-green-grey-second: #93998d;
+
+$transparent: rgba(0,0,0,.0);
+
+$green-bg-transparent: rgba($light-green-grey, .7);
+$green-bg-transparent-2: rgba($light-green-grey-second, .7);
+
+// =================================
+//main text colors
+// =================================
+$text--color: $grey;
+$akcent--text-color: $green;
+
+// =================================
+//main background colors
+// =================================
+$block-bg-transparent: rgba(18,38,32,.6);
+
+// =================================
+//main title colors
+// =================================
+$title--dark-color: $dark-grey;
+$title--light-color: $white;
+$subtitle--dark-color: $grey;
+$subtitle--light-color: $white;
+
+// =================================
+//default link colors
+// =================================
+$link--color: $blue;
+
+// =================================
+//FORMS
+// =================================
+//input-main-colors
+$input--bg-color: $white;
+$input--text-color: $light-grey;
+$input--hover-text-color: $dark-grey;
+$input--error-text-color: $light-grey;
+//input-icons-color
+$input--icon: $light-grey;
+$input--icon-hover: $dark-green;
+$input--icon-error: $red;
+$input--icon-bg: $light;
+//input-border-color
+$input--bodred-color: $transparent;
+$input--hover-border-color: $input--icon-hover;
+$input--error-border-color: $input--icon-error;
+//checkbox-colors
+$checkbox--color: $input--bg-color;
+$checkbox--active-color: $light-green;
+
+// =================================
+//button-colors
+// =================================
+$btn--text-color: $white;
+$btn--bg-color: $green;
+$btn--hover-bg-color: $dark-green;
+$btn--bg-transparent: $transparent;
+$btn--border-color: $transparent;
+$btn--bg-transparent-border: $white;
+
+
+
+
+

@@ -1,0 +1,28 @@
+extends ../base
+
+block head
+
+block content
+    .wrapper.welcome-wrapper
+        header.welcome-header
+            button#flip-card.btn.btn--transparent Авторизоваться
+
+        section.main.welcome-main
+            .flip-card
+                .flip-card__front-side
+                    .author-bio
+                        +avatar
+                        .author-bio__name Ярослав Кривда
+                        .author-bio__description Frontend Developer
+                        +social_links
+                ul.welcome-nav
+                    - var pages = {"Мои работы" : "works.html", "Обо мне" : "about.html", "Блог" : "blog.html"}
+                    each p_url, p_name in pages
+                        li.welcome-nav__item
+                            a(class="btn" href=p_url)= p_name
+        footer.welcome-footer
+            .copyright © Кривда Ярослав
+            .copyright Front-end developer
+            .copyright 2017
+
+

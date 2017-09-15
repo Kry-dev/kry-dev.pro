@@ -1,0 +1,106 @@
+.btn{
+  display: flex;
+  font-family:'Roboto-Medium';
+  font-size: 16px;
+  color: $btn--text-color;
+  background: $btn--bg-color;
+  border: 1px solid $btn--border-color;
+  padding: 1em;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  &:hover{
+    background: $btn--hover-bg-color;
+    text-decoration: none;
+  }
+  &--transparent{
+    background: $btn--bg-transparent;
+    border: 1px solid $btn--bg-transparent-border;
+  }
+}
+
+
+.social-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 1em;
+  padding: 0;
+  position: relative;
+  z-index: 5;
+  .social-links__item{
+    display: flex;
+    margin-right: 10px;
+    text-align: center;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  .social-links__link{
+    cursor: pointer;
+    font-size: 2em;
+    color: transparentize($white,.5);
+    &:hover,
+    &:active{
+      text-decoration: none;
+      color: $green;
+    }
+  }
+}
+
+
+.menu-button{
+  width: 40px;
+  height: 30px;
+  position: relative;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: $transparent;
+  padding: 0;
+  z-index: 10;
+  &__line,
+  &:before,
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    border-radius: 3px;
+    background-color: $white;
+    transform-origin: center center;
+    transition: all $transition-time;
+  }
+  &:before{
+    top: 0;
+  }
+  &:after{
+    bottom: 0;
+  }
+  &__line{
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  &:active,
+  &.active{
+    .menu-button__line {
+      opacity: 0;
+    }
+    &:before{
+      top: 50%;
+      -webkit-transform: translateY(-50%) rotate(-45deg);
+      -ms-transform: translateY(-50%) rotate(-45deg);
+      transform: translateY(-50%) rotate(-45deg);
+    }
+    &:after{
+      bottom: 50%;
+      -webkit-transform: translateY(50%) rotate(45deg);
+      -ms-transform: translateY(50%) rotate(45deg);
+      transform: translateY(50%) rotate(45deg);
+    }
+  }
+}
