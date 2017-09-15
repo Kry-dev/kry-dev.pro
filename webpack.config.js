@@ -104,7 +104,9 @@ module.exports = {
             {
               loader: 'file-loader',
               query: {
-                  name:'fonts/[name].[ext]'
+                name:'fonts/[name].[ext]',
+                publicPath: '.',
+                outputPath: './fonts/'
               }
             }
           ]
