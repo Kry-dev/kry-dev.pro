@@ -5,7 +5,12 @@
 }
 .works-header{
 	justify-content: flex-end;
-	.menu-button{
+	.social-links{
+		margin-top: 0;
+		justify-content: flex-start;
+		.social-links__item{
+			margin-right: 1em;
+		}
 	}
 
 }
