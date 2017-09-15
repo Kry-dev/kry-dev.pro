@@ -9,9 +9,9 @@
 	padding: 0;
 	width: 100%;
 	display: flex;
-	min-height: 650px;
+	min-height: 850px;
+	justify-content: space-between;
 	flex-direction: column;
-	//justify-content: flex-start;
 	&__top {
 		padding: 20px;
 		width: 100%;
@@ -136,6 +136,35 @@
 					margin-right: 10px;
 				}
 			}
+		}
+	}
+	&__projects-container {
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+		align-items: flex-start;
+		background: #e1e4d7;
+		overflow: hidden;
+
+	}
+	&__preview-container{
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		.portfolio-preview{
+			width: 70%;
+			display: flex;
+		}
+	}
+	&__navigation-container{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 30%;
+		.navigation-box{
+			display: flex;
+			width: 50%;
 		}
 	}
 }

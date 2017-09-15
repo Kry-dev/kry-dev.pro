@@ -20,7 +20,7 @@ block content
                     h1.page-title Мои работы
 
         section.portfolio-slider
-            .portfolio-slider__module.portfolio-slider__projects-container
+            .portfolio-slider__module
                 ul.portfolio-projects
                     li.project
                         .project__inner
@@ -33,7 +33,12 @@ block content
                                 i.fa.fa-link
                                 p Перейти на сайт
 
-            .portfolio-slider__module 2
+            .portfolio-slider__module.portfolio-slider__projects-container
+                .portfolio-slider__preview-container
+                    img(src=require("./work-1.png") alt="work1").portfolio-preview
+                .portfolio-slider__navigation-container
+                    .navigation-box.navigation-box_prev 1
+                    .navigation-box.navigation-box_next 2
 
 
         //footer.welcome-footer
