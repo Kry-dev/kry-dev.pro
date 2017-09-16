@@ -49,7 +49,7 @@ block content
                     .portfolio-thumbnails
                         .portfolio-thumbnails__item
                             img(src=require("./thumbnails-item-2.jpg") alt="previev work")
-    .wrapper.talks-wrapper
+    .wrapper.talks-wrapper.last-section
         section.talks
             .talks-title-box
                 h1.page-title Что обо мне говорят
@@ -71,11 +71,23 @@ block content
                         .author
                             p.author__name Сабанцев Владимир
                             p.author__description — преподаватель
+        .contact-form
+            form#contact
+                .contact-form__bg
+                .contact-form__content
+                    h3.contact-form__heading.page-title Связаться со мной
+                    input.contact-form__field(type="text" name="name" placeholder="Имя" required data-check="username")
+                    input.contact-form__field(type="email" name="email" placeholder="Email" required data-check="email")
+                    textarea.contact-form__field.contact-form__field_textarea(name="message" placeholder="Ваше сообщение" required )
 
-
-    footer.works-footer
-            .copyright © Кривда Ярослав
-            .copyright Front-end developer
-            .copyright 2017
+                ul.form-buttons
+                    - var buttons = {"Отправить" : "form-submit", "Очистить" : "form-clear"}
+                    each b_action, b_name in buttons
+                        li.form-buttons__button.form-buttons__button_even
+                            button(class="btn form-buttons__button-content", id=b_action)= b_name
+    //footer.works-footer
+    //        .copyright © Кривда Ярослав
+    //        .copyright Front-end developer
+    //        .copyright 2017
 
 

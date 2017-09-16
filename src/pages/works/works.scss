@@ -220,16 +220,24 @@
 	}
 }
 .talks-wrapper{
-
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	min-height: 1500px;
+	height: 100%;
+	background: url('./talks_bg.jpg');
+	background-color: $talks-title-bg;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 .talks{
 	display: flex;
 	width: 100%;
-	height: 100%;
 	flex-direction: column;
 	justify-content: stretch;
 	align-items: center;
-	background-color: $talks-title-bg;
 	.talks-title-box {
 		display: block;
 		flex: 1;
@@ -241,13 +249,8 @@
 		display: flex;
 		flex: auto;
 		width: 100%;
-		min-height: 1100px;
 		justify-content: center;
-		background: url('./talks_bg.jpg');
-		background-color: $talks-title-bg;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center bottom;
+		padding: 2em 0 4em;
 	}
 	.talks__testimonial-box{
 		max-width: 960px;
@@ -309,6 +312,102 @@
 		}
 	}
 
+}
+.contact-form{
+	display: flex;
+	justify-content: center;
+	width: 380px;
+	margin: 0 auto;
+	max-width: 90%;
+	border-radius: 3px;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	form{
+		width: 100%;
+		height: 100%;
+	}
+	&__bg{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 0;
+		background: rgba(224,224,220, .6);
+	}
+	&__content {
+		position: relative;
+		background: 0 0;
+		padding: 1.25em;
+	}
+	&__heading{
+		display: block;
+		position: relative;
+		color: $green-grey;
+		margin: .5em 0 1em;
+		&:after {
+			content: '';
+			position: absolute;
+			height: 3px;
+			width: 10%;
+			bottom: -.25em;
+			left: 50%;
+			margin-left: -5%;
+			background: $dark-grey;
+		}
+	}
+	&__field {
+		border-radius: 1.5em;
+		display: block;
+		margin: 1.25em auto;
+		padding: 1em;
+		width: 100%;
+		outline: 0;
+		background: $input--bg-color;
+		color: $input--text-color;
+		-webkit-transition: box-shadow .3s;
+		transition: box-shadow .3s;
+		border: 1px solid $input--bodred-color;
+	}
+	&__field_textarea{
+		min-height: 10em;
+	}
+	.form-buttons{
+		position: relative;
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		justify-content: center;
+		z-index: 20;
+		&__button,
+		&__button-content{
+			display: flex;
+			width: 100%;
+			cursor: pointer;
+		}
+		&__button{
+			border-right: 2px solid rgba($white, .5);
+			&:last-child{
+				border: none;
+			}
+		}
+		.btn{
+			display: flex;
+			text-align: center;
+			width: 100%;
+			background: transparentize($green, 0.15);
+			&:hover{
+				background: transparentize($dark-green, 0.15);
+			}
+		}
+	}
+
+}
+
+.last-section{
+	padding-bottom: 240px;
+	margin-bottom: -240px;
 }
 .works-footer{
 	display: flex;
