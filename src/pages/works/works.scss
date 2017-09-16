@@ -1,7 +1,10 @@
 @import '../../scss/base';
 .works-wrapper{
 	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	width: 100%;
+	height: 100%;
 	background: url("../../img/welcome_bg.jpg") no-repeat;
 	background-size: cover;
 }
@@ -9,8 +12,8 @@
 	padding: 0;
 	width: 100%;
 	display: flex;
-	min-height: 850px;
-	justify-content: space-between;
+	min-height: 820px;
+	justify-content: stretch;
 	flex-direction: column;
 	&__top {
 		padding: 20px;
@@ -35,6 +38,7 @@
 	}
 	.site_author{
 		display: flex;
+		flex: 1;
 		width: 100%;
 		flex-direction: column;
 		justify-content: center;
@@ -58,7 +62,7 @@
 	.header-title-box{
 		display: flex;
 		width: 100%;
-		background: $white;
+		background: $myworks-title-bg;
 		justify-content: center;
 		.header-box__title{
 			width: 100%;
@@ -79,15 +83,18 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	.portfolio-projects{
+		display: flex;
 		width: 50%;
 		height: 100%;
 		overflow: hidden;
 		position: relative;
+		flex-direction: column;
 		.project{
 			display: flex;
 			width: 100%;
 			height: 100%;
 			padding: 5% 10%;
+			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			&__inner {
@@ -211,4 +218,99 @@
 			}
 		}
 	}
+}
+.talks-wrapper{
+
+}
+.talks{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	justify-content: stretch;
+	align-items: center;
+	background-color: $talks-title-bg;
+	.talks-title-box {
+		display: block;
+		flex: 1;
+		width: 60%;
+		padding: 4em 1em;
+		@include page-title;
+	}
+	.talks__content{
+		display: flex;
+		flex: auto;
+		width: 100%;
+		min-height: 1100px;
+		justify-content: center;
+		background: url('./talks_bg.jpg');
+		background-color: $talks-title-bg;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center bottom;
+	}
+	.talks__testimonial-box{
+		max-width: 960px;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		.testimonial{
+			width: 50%;
+			font-size: 1em;
+			text-align: center;
+			position: relative;
+			&:before{
+				position: absolute;
+				left: 2.5em;
+				top: 4.5em;
+				content: '';
+				width: 80px;
+				height: 70px;
+				background: url('./blockquote.png') no-repeat top center;
+			}
+			&__author-photo{
+				display: flex;
+				justify-content: center;
+				.avatar {
+					width: 80px;
+					height: 80px;
+					overflow: hidden;
+					border-radius: 50%;
+					img{
+						width: 100%;
+					}
+				}
+			}
+			&__text{
+				font-family:'Roboto-Italic';
+				font-size: 1em;
+				line-height: 1.6em;
+				text-align: left;
+				color: $testimonial-text-color;
+			}
+			.author{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				&__name{
+					font-family:'Roboto-BoldItalic';
+					color: $green;
+					font-size: 1em;
+					line-height: 1.6em;
+				}
+				&__description{
+					font-family:'Roboto-Italic';
+					color: $dark-grey;
+					font-size: 1em;
+					line-height: 1.6em;
+				}
+			}
+		}
+	}
+
+}
+.works-footer{
+	display: flex;
+	width: 100%
 }

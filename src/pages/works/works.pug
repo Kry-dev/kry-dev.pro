@@ -13,12 +13,13 @@ block content
                 +avatar
                 p.site_author__name Кривда Ярослав
                 p.site_author__description Личный сайт веб разработчика
-            svg.header__svg-bg
+            //svg.header__svg-bg
                 //use(xlink:href="#icon-portfolio_header")
             .header-title-box
                 .header-box__title
                     h1.page-title Мои работы
 
+    .wrapper.main
         section.portfolio-slider
             ul.portfolio-projects
                 li.project
@@ -48,10 +49,33 @@ block content
                     .portfolio-thumbnails
                         .portfolio-thumbnails__item
                             img(src=require("./thumbnails-item-2.jpg") alt="previev work")
+    .wrapper.talks-wrapper
+        section.talks
+            .talks-title-box
+                h1.page-title Что обо мне говорят
+            .talks__content
+                .talks__testimonial-box
+                    .testimonial
+                        .testimonial__author-photo
+                            .avatar
+                                img(src=require("./dima.png") alt="Дмитрий Ковальчук")
+                        blockquote.testimonial__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .author
+                            p.author__name Дмитрий Ковальчук
+                            p.author__description — сооснователь Loftschool
+                    .testimonial
+                        .testimonial__author-photo
+                            .avatar
+                                img(src=require("./Vova.jpg") alt="Владимир Сабанцев")
+                        blockquote.testimonial__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+                        .author
+                            p.author__name Сабанцев Владимир
+                            p.author__description — преподаватель
 
-        //footer.welcome-footer
-        //    .copyright © Кривда Ярослав
-        //    .copyright Front-end developer
-        //    .copyright 2017
+
+    footer.works-footer
+            .copyright © Кривда Ярослав
+            .copyright Front-end developer
+            .copyright 2017
 
 
