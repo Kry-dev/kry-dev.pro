@@ -137,3 +137,15 @@
     }
   }
 }
+.map-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  height: calc(100% + 250px);
+  min-height: calc(750px + 250px);
+  width: 100%;
+  background: url("../../img/map-holder.jpg") no-repeat;
+  background-size: cover;
+  z-index: 5;
+}
