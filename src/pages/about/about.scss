@@ -61,4 +61,79 @@
       margin-bottom: 1em;
     }
   }
+  .skills {
+    flex-direction: column;
+    padding: 1.25em;
+    min-height: 650px;
+    background: $skills-box-bg;
+    &__title-box {
+      width: 25%;
+      align-self: center;
+      @include page-title;
+      color: $green-grey;
+      margin-bottom: 2em;
+    }
+    &__text-box {
+      margin-bottom: 2em;
+    }
+    &__author-text {
+      font-family: 'Roboto';
+      font-size: 1em;
+      text-align: left;
+      line-height: 1.25em;
+      color: $green-grey;
+      margin-bottom: 1em;
+    }
+
+    &__group {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+    }
+    &__group-title{
+      font-family: 'Roboto-Medium';
+      color: $green-grey;
+      text-align: left;
+      bottom: 1em;
+    }
+    &__group-list{
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 100%;
+      margin-bottom: 1em;
+
+    }
+    &__group-item{
+      display: inline-flex;
+      max-width: 120px;
+      position: relative;
+      margin-bottom: 1em;
+      .piechart {
+        width: 120px;
+        height: 120px;
+        &__bg {
+          stroke: $light-orange-gray;
+          stroke-dashoffset: 0;
+        }
+        &__fill {
+          stroke: $green;
+          transition: stroke-dashoffset $transition-time_slow;
+        }
+      }
+    }
+    &__group-item + .skills__group-item{
+      margin-left: 1em;
+    }
+    &__group-item-title{
+      position: absolute;
+      font-family: 'Roboto-Medium';
+      font-size: 0.875em;
+      width: 120px;
+      padding: 20px;
+      color: $green;
+      top: 50%;
+      text-align: center;
+      transform: translateY(-55%);
+    }
+  }
 }

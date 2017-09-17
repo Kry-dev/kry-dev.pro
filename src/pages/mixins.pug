@@ -29,3 +29,12 @@ mixin main-nav
         each p_url, p_name in pages
             li.main-nav__item
                 a(class="btn" href=p_url)= p_name
+
+
+mixin pie_chart(skill, percentage)
+    li.skills__group-item
+        .skills__group-item-title=skill
+        svg(class="piechart" viewBox="0 0 120 120")
+            circle(class="piechart__bg" fill="none" stroke-width="20" stroke-dasharray="314.159265" stroke-dashoffset="314.159265" cx="60" cy="60" r="50" transform="rotate(-90, 60, 60)")
+            circle(class="piechart__fill", data-percentage=percentage , fill="none", stroke-width="20", stroke-dasharray="314.159265", stroke-dashoffset=percentage , cx="60", cy="60", r="50", transform="rotate(-90, 60, 60)")
+

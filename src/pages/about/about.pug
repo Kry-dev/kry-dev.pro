@@ -25,6 +25,36 @@ block content
                     p.bio__author-text Мне 28 лет. Живу и работаю в г. Винница, Украина. Программист, верстальщик, фотограф.
                     p.bio__author-text С 2010г по 2015г работал программистом в сервисном центре по ремонту мобильных гаджетов. После открыл для себя WEB и решил изменить свои интересы. Последние 2 года работаю front-end разработчиком и это мне очень нравится.
                     p.bio__author-text Обожаю путешествовать и фотографировать. Люблю фотографировать людей, природу и моменты прекрасного, что поймает объектив моей камыеры.
-            .about-me__col.skills 2
+            .about-me__col.skills
+                .skills__title-box
+                    h3.page-title Чем я могу быть вам полезен
+                .skills__text-box
+                    p.skills__author-text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+                .skills__group
+                    h4.skills__group-title Frontend
+                    ul.skills__group-list
+                        +pie_chart("Html 5", 59)
+                        +pie_chart("CSS 3", 82)
+                        +pie_chart("Js & Jquery", 140)
+                        +pie_chart("Sass", 89)
+                        +pie_chart("Less", 134)
+                        +pie_chart("Pug", 148)
+                .skills__group
+                    h4.skills__group-title Backend
+                    ul.skills__group-list
+                        +pie_chart("PHP", 289)
+                        +pie_chart("MySQL", 259)
+                        +pie_chart("Node.js", 300)
+                        +pie_chart("Mongo.db", 300)
+                .skills__group
+                    h4.skills__group-title Workflow
+                    ul.skills__group-list
+                        +pie_chart("Yarn", 139)
+                        +pie_chart("Npm", 139)
+                        +pie_chart("Gulp", 123)
+                        +pie_chart("Webpack", 180)
+                        +pie_chart("Git", 130)
+                        +pie_chart("Photoshop", 170)
+                        +pie_chart("Lightroom", 100)
 
     include ../footer
