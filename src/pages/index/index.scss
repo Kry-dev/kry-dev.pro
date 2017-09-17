@@ -30,14 +30,16 @@
     width: 100%;
 
     .author-bio{
-      padding: 2.25em;
+      display: flex;
+      flex-direction: column;
+      padding: 2.25em 0 0;
       &__name{
         font-size: 1.75em;
         font-family: 'Roboto-Medium';
         color: $white;
         line-height: 1;
         text-align: center;
-        margin: 1em auto .5em;
+        margin-bottom: .5em;
       }
       &__description{
         font-size: 1em;
@@ -45,22 +47,23 @@
         color: opacify($white,.8);
         line-height: 1;
         text-align: center;
-        margin: .5em auto;
+        margin-bottom: 1.5em;
       }
     }
     @include avatar;
-
+    .social-links{
+      padding: 0 2em;
+    }
   }
-  .welcome-nav{
+  .main-nav{
     display: flex;
     flex-direction: row;
     width: 100%;
     flex: 1 1 auto;
-    li.welcome-nav__item{
+    &__item{
       flex-grow: 1;
       margin: 0;
       padding: 0;
-      border-right: 2px solid rgba($white, .5);
       &:last-child{
         border: none;
       }
@@ -73,6 +76,9 @@
           background: transparentize($dark-green, 0.15);
         }
       }
+    }
+    &__item + .main-nav__item{
+      border-left: 2px solid rgba($white, .5);
     }
   }
 }

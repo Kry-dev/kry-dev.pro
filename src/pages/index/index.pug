@@ -15,11 +15,7 @@ block content
                         .author-bio__name Ярослав Кривда
                         .author-bio__description Frontend Developer
                         +social_links
-                ul.welcome-nav
-                    - var pages = {"Мои работы" : "works.html", "Обо мне" : "about.html", "Блог" : "blog.html"}
-                    each p_url, p_name in pages
-                        li.welcome-nav__item
-                            a(class="btn" href=p_url)= p_name
+                        +main-nav
         footer.footer.welcome-footer
             .copyright-row
                 .copyright © Кривда Ярослав

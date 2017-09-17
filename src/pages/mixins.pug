@@ -18,12 +18,14 @@ mixin social_links(style)
 
 mixin navigation
     ul.nav-list
-        li.nav-list__item
-            a(href="/works.html").nav-list__link Мои работы
-        li.nav-list__item
-            a(href="/about.html").nav-list__link Обо мне
-        li.nav-list__item
-            a(href="/blog.html").nav-list__link Блог
-        li.nav-list__item
-            a(href="#").nav-list__link Авторизация
+        - var nav_pages = {"Мои работы" : "works.html", "Обо мне" : "about.html", "Блог" : "blog.html", "Авторизация" : "#"};
+        each p_url, p_name in nav_pages
+            li.nav-list__item
+                a(class="nav-list__link" href=p_url)= p_name
 
+mixin main-nav
+    ul.main-nav
+        - var pages = {"Мои работы" : "works.html", "Обо мне" : "about.html", "Блог" : "blog.html"}
+        each p_url, p_name in pages
+            li.main-nav__item
+                a(class="btn" href=p_url)= p_name
