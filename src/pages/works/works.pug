@@ -4,8 +4,8 @@ block head
 
 block content
     .wrapper.works-wrapper
-        header.works-header
-            .works-header__top
+        header.site-header
+            .site-header__top
                 +social_links
                 button#menu-toggle.menu-button
                     span.menu-button__line
@@ -85,22 +85,7 @@ block content
                     each b_action, b_name in buttons
                         li.form-buttons__button.form-buttons__button_even
                             button(class="btn form-buttons__button-content", id=b_action)= b_name
-    footer.footer.works-footer
-        .footer-row
-            .footer-col
-                p.footer__text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
 
-            .footer-col
-                +navigation
-                +social_links
-            .footer-col
-                p.footer__quote
-                    span.footer__quote-text Болтовня ничего не стоит. Покажите мне код.
-                    span.footer__quote-author — Linus Torvalds
-
-        .copyright-row.copyright-row__green-bg
-            .copyright © Кривда Ярослав
-            .copyright Front-end developer
-            .copyright 2017
+    include ../footer
 
 

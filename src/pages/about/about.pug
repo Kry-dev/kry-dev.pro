@@ -1,3 +1,20 @@
-//
-   Created by admin on 09.09.17.
+extends ../base
 
+block head
+
+block content
+    .wrapper.about-wrapper
+        header.site-header
+            .site-header__top
+                +social_links
+                button#menu-toggle.menu-button
+                    span.menu-button__line
+            .site_author
+                +avatar
+                p.site_author__name Кривда Ярослав
+                p.site_author__description Личный сайт веб разработчика
+            .header-title-box
+                .header-box__title
+                    h1.page-title Мои работы
+
+    include ../footer
