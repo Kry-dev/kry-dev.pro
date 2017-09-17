@@ -13,8 +13,18 @@ block content
                 +avatar
                 p.site_author__name Кривда Ярослав
                 p.site_author__description Личный сайт веб разработчика
-            .header-title-box
-                .header-box__title
-                    h1.page-title Мои работы
+    .wrapper.about-me-wrapper
+        section.about-me
+            .about-me__col.bio
+                .bio__title-box
+                    h1.page-title Обо мне
+                .bio__author-box
+                    .bio__author-photo
+                        img(src=require("./yaroslav-kryvda.jpg") alt="Yaroslav Kryvda")
+                    h3.page-title Кто я
+                    p.bio__author-text Мне 28 лет. Живу и работаю в г. Винница, Украина. Программист, верстальщик, фотограф.
+                    p.bio__author-text С 2010г по 2015г работал программистом в сервисном центре по ремонту мобильных гаджетов. После открыл для себя WEB и решил изменить свои интересы. Последние 2 года работаю front-end разработчиком и это мне очень нравится.
+                    p.bio__author-text Обожаю путешествовать и фотографировать. Люблю фотографировать людей, природу и моменты прекрасного, что поймает объектив моей камыеры.
+            .about-me__col.skills 2
 
     include ../footer

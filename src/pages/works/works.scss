@@ -43,10 +43,8 @@
 				text-align: center;
 				color: $green-grey;
 				margin-bottom: 1em;
-				@include title-underline;
-				&:after {
-					background: $green-grey;
-				}
+				@include page-title;
+
 			}
 			&__tech-box{
 				display: flex;
