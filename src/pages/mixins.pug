@@ -1,13 +1,8 @@
-// =================================
-   AVATAR
-// =================================
+
 mixin avatar
     .avatar
         img(src=require("./my_photo.jpg") title="Кривда Ярослав - Frontend developer" alt="Кривда Ярослав - Frontend developer")
 
-// =================================
-//  social links
-// =================================
 mixin social_links(style)
     ul.social-links
         -
@@ -20,4 +15,15 @@ mixin social_links(style)
         each s_url, s_name in socials
             li(class="social-links__item" + ((style) ? " social-links__item_#{style}" : ""))
                 a(class="social-links__link fa fa-" + s_name, href=s_url, target="_blank")
+
+mixin navigation
+    ul.nav-list
+        li.nav-list__item
+            a(href="/works.html").nav-list__link Мои работы
+        li.nav-list__item
+            a(href="/about.html").nav-list__link Обо мне
+        li.nav-list__item
+            a(href="/blog.html").nav-list__link Блог
+        li.nav-list__item
+            a(href="#").nav-list__link Авторизация
 

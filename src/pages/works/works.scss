@@ -368,7 +368,7 @@
 		color: $input--text-color;
 		-webkit-transition: box-shadow .3s;
 		transition: box-shadow .3s;
-		border: 1px solid $input--bodred-color;
+		border: 1px solid $input--border-color;
 	}
 	&__field_textarea{
 		min-height: 10em;
@@ -406,10 +406,7 @@
 
 }
 
-.last-section{
-	padding-bottom: 240px;
-	margin-bottom: -240px;
-}
+
 .works-footer{
 	display: flex;
 	width: 100%

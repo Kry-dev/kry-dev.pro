@@ -1,21 +1,70 @@
+.footer{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	color: $white;
+	.copyright-row{
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		justify-content: center;
+		padding: 1em 2em;
+		&__green-bg{
+			background: transparentize($green, 0.15);
+			.copyright{
+				font-size: 1em;
+				line-height: 1.5em;
+				font-family:'Roboto-Light';
+			}
+		}
+	}
+	.copyright{
+		font-family:'Roboto-Medium';
+		font-size: 1em;
+		text-align: center;
+		padding: 0 0.5em;
+		&+.copyright{
+			border-left: 1px solid $white;
+		}
+	}
+	.footer-row{
+		display: flex;
+		width: 100%;
+		background: transparentize($dark-grey, 0.15);
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 2em;
+		.footer-col{
+			display: flex;
+			flex-direction: column;
+			padding: 0 1em;
+			width: 100%;
+			& +.footer-col{
+				border-left: 1px solid rgba($white, .2) ;
+			}
+		}
 
-/* ============================ */
-/* :: Required :: */
-/* ============================ */
-@import "common/mixins"
-@import "common/vars"
-@import "common/extends"
-
-
-
-/* ============================ */
-/* :: App Styles :: */
-/* ============================ */
-//@import "common/popup"
-
-@import "pages/index"
-@import "pages/works"
-@import "pages/about"
-@import "pages/blog"
-
-@import "common/footer"
+	}
+	&__text{
+		font-size: 1em;
+		line-height: 1.5em;
+		font-family:'Roboto-Light';
+	}
+	&__quote{
+		font-size: 1em;
+		line-height: 1.5em;
+		width: 100%;
+	}
+	&__quote-text{
+		font-family:'Roboto-LightItalic';
+	}
+	&__quote-author{
+		font-family: 'Roboto-BoldItalic';
+	}
+	.social-links{
+		&__link:hover,
+		&__link:active{
+			color: $white;
+		}
+	}
+}

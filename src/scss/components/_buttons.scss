@@ -20,22 +20,22 @@
 }
 
 
-.social-links{
+.social-links {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-  margin-top: 1em;
+  margin-bottom: 1em;
   padding: 0;
   position: relative;
   z-index: 5;
-  .social-links__item{
+
+  &__item{
     display: flex;
-    margin-right: 10px;
     text-align: center;
-    &:last-child{
-      margin-right: 0;
-    }
+  }
+  &__item + .social-links__item{
+    margin-left: 10px;
   }
   .social-links__link{
     cursor: pointer;

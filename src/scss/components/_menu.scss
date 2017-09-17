@@ -1,0 +1,22 @@
+.nav-list{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom: 1em;
+	&__item{
+		display: flex;
+
+	}
+	&__item+.nav-list__item{
+		margin-left: 10px;
+	}
+	&__link{
+		font-family: 'Roboto-Bold';
+		display: flex;
+		width: 100%;
+		color: $white;
+	}
+}
