@@ -23,7 +23,7 @@ block content
                         img(src=require("./yaroslav-kryvda.jpg") alt="Yaroslav Kryvda")
                     h3.page-title Кто я
                     p.bio__author-text Мне 28 лет. Живу и работаю в г. Винница, Украина. Программист, верстальщик, фотограф.
-                    p.bio__author-text С 2010г по 2015г работал программистом в сервисном центре по ремонту мобильных гаджетов. После открыл для себя WEB и решил изменить свои интересы. Последние 2 года работаю front-end разработчиком и это мне очень нравится.
+                    p.bio__author-text С 2010г. по 2015г. работал программистом в сервисном центре по ремонту мобильных гаджетов. После открыл для себя WEB и решил изменить свои интересы. Последние 2 года работаю front-end разработчиком и это мне очень нравится.
                     p.bio__author-text Обожаю путешествовать и фотографировать. Люблю фотографировать людей, природу и моменты прекрасного, что поймает объектив моей камыеры.
             .about-me__col.skills
                 .skills__title-box
@@ -58,6 +58,24 @@ block content
                         +pie_chart("Lightroom", 100)
     .wrapper.map-wrapper.last-section
         section.map-contact
-
+            .contact-info
+                h3.contaci-info__title Контакты
+                ul.contact-info__list
+                    li.contact-info__item
+                        a.contact-info__link(href="skype:yarik890105?call")
+                            i.fa.fa-skype
+                            | yarik890105
+                    li.contact-info__item
+                        a.contact-info__link(href="mailto:yaroslavkryvda@gmail.com")
+                            i.fa.fa-envelope
+                            | yaroslavkryvda@gmail.com
+                    li.contact-info__item
+                        a.contact-info__link(href="skype:+380969199955?call")
+                            i.fa.fa-phone
+                            | +38 (096) 919-99-55
+                    li.contact-info__item
+                        a.contact-info__link(href="#" target="_blank")
+                            i.fa.fa-map-marker
+                            | г. Винница, Украина
 
     include ../footer
