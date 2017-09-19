@@ -179,6 +179,7 @@
 		width: 60%;
 		padding: 4em 1em;
 		@include page-title;
+		margin-bottom: 0;
 	}
 	.talks__content{
 		display: flex;
