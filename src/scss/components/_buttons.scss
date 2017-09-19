@@ -104,3 +104,38 @@
     }
   }
 }
+.go-down,
+.go-up {
+  color: $white;
+  font-size: em(36);
+  opacity: .7;
+  transition: all $transition-time;
+  padding: 0;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.go-down {
+  position: absolute;
+  z-index: 1;
+  bottom: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.25em;
+  &:hover {
+    padding-top: 10px;
+    bottom: 290px;
+  }
+}
+
+.go-up {
+  display: block;
+  position: relative;
+  margin: 70px auto;
+  width: 50px;
+  height: 50px;
+  font-size: em(40);
+  text-shadow: 0 0 10px rgba(invert($white), .5);
+}
+
