@@ -7,9 +7,15 @@
 	height: 100%;
 	background: url("../../img/welcome_bg.jpg") no-repeat;
 	background-size: cover;
+
+	.header-title-box{
+		background-color: $myworks-title-bg;
+		background-image: url("../../img/svg/works_header.svg");
+		background-position: center top;
+		background-repeat: no-repeat;
+		z-index: 50;
+	}
 }
-
-
 .portfolio-slider{
 	display: flex;
 	width: 100%;
@@ -179,7 +185,6 @@
 		width: 60%;
 		padding: 4em 1em;
 		@include page-title;
-		margin-bottom: 0;
 	}
 	.talks__content{
 		display: flex;
