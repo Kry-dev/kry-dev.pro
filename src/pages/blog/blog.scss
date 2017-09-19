@@ -8,8 +8,16 @@
     background: url("../../img/welcome_bg.jpg") no-repeat;
     background-size: cover;
     overflow: hidden;
-    .site-header{
-        min-height: 450px;
+    .site-header {
+        .site_author{
+            min-height: 450px;
+        }
+        &__svg-corner{
+            bottom: -110px;
+        }
+        &__svg-bg{
+            top: 55%;
+        }
     }
     .social-links{
         &__link{

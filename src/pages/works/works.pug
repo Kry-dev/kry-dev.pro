@@ -3,6 +3,7 @@ extends ../base
 block head
 
 block content
+    include ../sprites
     .wrapper.works-wrapper
         header.site-header
             .site-header__top
@@ -13,6 +14,10 @@ block content
                 +avatar
                 p.site_author__name Кривда Ярослав
                 p.site_author__description Личный сайт веб разработчика
+
+            svg.site-header__svg-bg
+                use(xlink:href="#icon-portfolio_header")
+
             button.go-down.fa.fa-chevron-down(data-link=".portfolio-slider")
 
             svg.site-header__svg-corner(preserveAspectRatio="none" viewBox="0 0 2000 400")

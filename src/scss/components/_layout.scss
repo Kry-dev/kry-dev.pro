@@ -81,7 +81,9 @@ p{
 .last-section{
   margin-bottom: -205px;
 }
-
+.sprites-container{
+  display: none;
+}
 .site-header{
   padding: 0;
   width: 100%;
@@ -149,15 +151,15 @@ p{
   position: relative;
   &__svg-bg {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
     height: 100%;
     z-index: 0;
     fill: $white;
-    opacity: .06; }
-
+    opacity: .12;
+  }
   &__svg-corner {
     position: absolute;
     width: 100%;
@@ -176,11 +178,25 @@ p{
       right: 0;
       left: auto;
       width: 50%;
-      fill: $myworks-title-bg;
+      fill: $skills-box-bg;
     }
     &_blog {
       fill: $white;
     }
   }
 
+}
+.svg-heading {
+  padding: 30px 15px 15px;
+  &__text {
+    color: $white;
+    width: auto;
+  }
+  &__img {
+    fill: $white;
+    opacity: .2;
+    height: 300px;
+    width: 300px;
+    transform: translate(-50%,-45%);
+  }
 }
