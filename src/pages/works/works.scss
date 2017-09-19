@@ -185,6 +185,10 @@
 		width: 60%;
 		padding: 4em 1em;
 		@include page-title;
+		background-image: url("../../img/svg/about_header.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: 50;
 	}
 	.talks__content{
 		display: flex;
