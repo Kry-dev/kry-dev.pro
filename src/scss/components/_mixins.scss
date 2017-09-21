@@ -26,6 +26,9 @@
     left: 50%;
     margin-left: -45px;
     background: $dark-grey;
+    @include phone {
+      bottom: -20px;
+    }
   }
 }
 //page title

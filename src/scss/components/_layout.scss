@@ -45,6 +45,10 @@ html, body {
     flex: 1;
     flex-direction: column;
   }
+  @include phone{
+    justify-content: flex-start;
+    height: auto;
+  }
 }
 header{
   display: flex;
@@ -66,11 +70,16 @@ h1,h2,h3,h4,h5{
 }
 h1{
   font-size: 3.9375em;
-
+  @include phone {
+    font-size: 2.5em;
+  }
 }
 h3{
   font-size: 2.1815em;
   line-height: 1.2;
+  @include phone{
+    font-size: 1.5em;
+  }
 }
 h4{
   font-size: 1.75em;
@@ -86,6 +95,9 @@ p{
 }
 .last-section{
   margin-bottom: -205px;
+  @include phone{
+    margin-bottom: -373px;
+  }
 }
 .sprites-container{
   display: none;
@@ -113,10 +125,11 @@ p{
         margin-right: 1em;
       }
     }
-    .menu-button{
+    .menu-button {
       display: flex;
     }
   }
+
   .site_author{
     display: flex;
     flex: 1;
@@ -150,6 +163,26 @@ p{
       width: 100%;
       padding: 4em 1em;
       @include page-title;
+    }
+  }
+  @include phone {
+    &__top {
+      padding: 10px;
+      min-height: 25px;
+    }
+    .site_author{
+      min-height: 410px;
+      justify-content: flex-start;
+      padding-top: 2em;
+      &_name{
+        margin: 10px auto;
+      }
+    }
+    .header-title-box{
+      .header-box__title {
+        width: 100%;
+        padding: 2em 1em;
+      }
     }
   }
 }
@@ -188,6 +221,12 @@ p{
     }
     &_blog {
       fill: $white;
+    }
+  }
+  @include phone {
+    &__svg-corner{
+      height: 70px;
+      bottom: 85px;
     }
   }
 

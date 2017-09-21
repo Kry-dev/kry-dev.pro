@@ -62,7 +62,17 @@
 				border-left: 1px solid rgba($white, .2) ;
 			}
 		}
-
+		@include phone{
+			flex-direction: column;
+			.footer-col{
+				margin-bottom: 20px;
+				& +.footer-col{
+					padding-top: 20px;
+					border-left: none;
+					border-top: 1px solid rgba($white, .2) ;
+				}
+			}
+		}
 	}
 	&__text{
 		font-size: 1em;
@@ -84,6 +94,34 @@
 		&__link:hover,
 		&__link:active{
 			color: $white;
+		}
+	}
+	@include phone{
+		&__text{
+			font-family: 'Roboto Light';
+			text-align: center;
+		}
+		.nav-list{
+			&__link{
+				font-family: 'Roboto-Medium';
+			}
+		}
+		.social-links{
+			justify-content: center;
+			&__link{
+				opacity: .5;
+				&:hover,
+				&:active{
+					opacity: 1;
+				}
+			}
+		}
+		&__quote{
+			text-align: center;
+			opacity: .5;
+		}
+		&__quote-text{
+			display: block;
 		}
 	}
 }
