@@ -2,6 +2,9 @@
 .welcome-wrapper{
   background: url("../../img/welcome_bg.jpg") no-repeat;
   background-size: cover;
+  @include phone{
+    height: 100%;
+  }
 }
 .welcome-header{
   justify-content: flex-end;
@@ -14,6 +17,7 @@
   }
   @include phone {
     justify-content: center;
+    height: auto;
     .btn{
       padding: .8em 2em;
     }
@@ -88,6 +92,18 @@
     }
     &__item + .main-nav__item{
       border-left: 2px solid rgba($white, .5);
+    }
+  }
+  @include phone{
+    .author-bio{
+      &__description{
+        opacity: .8;
+      }
+    }
+    .social-links {
+      &__link{
+        color: rgba($white, .5);
+      }
     }
   }
 }
