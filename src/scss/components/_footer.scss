@@ -19,6 +19,23 @@
 				font-family:'Roboto-Light';
 			}
 		}
+		@include phone{
+			flex-direction: row;
+			padding: 10px;
+			flex-wrap: wrap;
+			.copyright+.copyright{
+				border: none;
+			}
+			.copyright{
+				font-family: "Roboto Light";
+				&:first-child{
+					width: 100%;
+				}
+				&:last-child{
+					border-left: 1px solid $white;
+				}
+			}
+		}
 	}
 	.copyright{
 		font-family:'Roboto-Medium';

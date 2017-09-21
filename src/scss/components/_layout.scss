@@ -29,6 +29,9 @@ html, body {
   height: 100%;
   font-size: 16px;
   font-weight: normal;
+  @include phone{
+    font-size: 14px;
+  }
 }
 .wrapper{
   display: flex;
@@ -47,6 +50,9 @@ header{
   display: flex;
   width: 100%;
   padding: 20px;
+  @include phone{
+    padding: 10px;
+  }
 }
 h1,h2,h3,h4,h5{
   font-family: 'Sansus-Webissimo';

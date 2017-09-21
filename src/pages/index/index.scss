@@ -12,6 +12,12 @@
       outline: none;
     }
   }
+  @include phone {
+    justify-content: center;
+    .btn{
+      padding: .8em 2em;
+    }
+  }
 }
 .welcome-main{
   position: relative;
@@ -25,6 +31,9 @@
     border: none;
     overflow: hidden;
     background: $block-bg-transparent;
+    @include phone {
+      min-width: 300px;
+    }
   }
   .flip-card__front-side{
     width: 100%;
