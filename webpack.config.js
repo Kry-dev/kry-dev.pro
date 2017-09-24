@@ -6,7 +6,6 @@ const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 // const StyleLintPlugin = require('stylelint-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-
 const PATHS = {
   source: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'build'),
@@ -57,6 +56,10 @@ module.exports = {
       jQuery: 'jquery',
     }),
     new UglifyJSPlugin(),
+    new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery"
+    }),
   ],
   module: {
     rules: [

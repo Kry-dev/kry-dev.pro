@@ -8,7 +8,7 @@ block content
             button#flip-card.btn.btn--transparent Авторизоваться
 
         section.main.welcome-main
-            .welcome-card
+            .welcome-card.flip-container
                 .welcome-card__front-side
                     .author-bio
                         +avatar
@@ -16,7 +16,6 @@ block content
                         .author-bio__description Frontend Developer
                         +social_links
                         +main-nav
-            .welcome-card
                 .welcome-card__back-side
                     h3.welcome-title.welcome-title__card Авторизуйтесь
 
@@ -25,7 +24,7 @@ block content
                         .form__input-group
                             span.form__input-group-addon
                                 i.fa.fa-user(aria-hidden='true')
-                            input.form__input.form--login__input.error(id="login", name="login" type="text",placeholder="Логин")
+                            input.form__input.form--login__input(id="login", name="login" type="text",placeholder="Логин")
                         .form__input-group
                             span.form__input-group-addon
                                 i.fa.fa-key(aria-hidden='true')
@@ -47,7 +46,7 @@ block content
                         nav.welcome-card__welcome-nav
                             ul.main-nav
                                 li.main-nav__item
-                                    a.btn.btn--hide-login(href='/index.html') На главную
+                                    a#unflip-card.btn(href='/index.html') На главную
                                 li.main-nav__item
                                     input(type="submit" id="login-btn" value="Войти").btn
         footer.footer.welcome-footer

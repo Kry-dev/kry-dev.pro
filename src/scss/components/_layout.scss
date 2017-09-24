@@ -212,13 +212,12 @@ p{
     margin-bottom: 1.1875em;
     width: 100%;
     overflow: hidden;
-    border-radius: 1.5em;
   }
   &__input-group-addon{
     display: flex;
     align-self: center;
     padding: 0.9em 1em;
-
+    border-radius:  1.5em 0 0 1.5em;
     color: $input--icon;
     text-align: center;
     background-color: #f0efe9;
@@ -233,10 +232,11 @@ p{
   &__input{
     background: $input--bg-color;
     width: 100%;
-    border: none;
-    padding: 0.78125em 1em;
+    padding: 0.8em 1em;
     outline: none;
+    border: 0;
     color: $input--text-color;
+    border-radius: 0 1.5em 1.5em 0;
   }
   &__input-group--checkbox{
     border-radius: 0;
