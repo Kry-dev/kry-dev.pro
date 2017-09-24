@@ -51,16 +51,16 @@ $link--color: $blue;
 //input-main-colors
 $input--bg-color: $white;
 $input--text-color: $light-grey;
-$input--hover-text-color: $dark-grey;
+$input--focus-text-color: $dark-grey;
 $input--error-text-color: $light-grey;
 //input-svg-color
 $input--icon: $light-grey;
-$input--icon-hover: $dark-green;
+$input--icon-focus: $dark-green;
 $input--icon-error: $red;
 $input--icon-bg: $light;
 //input-border-color
 $input--border-color: $transparent;
-$input--hover-border-color: $input--icon-hover;
+$input--focus-border-color: $input--icon-focus;
 $input--error-border-color: $input--icon-error;
 //checkbox-colors
 $checkbox--color: $input--bg-color;

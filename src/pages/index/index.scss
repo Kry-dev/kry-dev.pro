@@ -18,16 +18,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .flip-card{
+  .welcome-card{
     position: absolute;
     min-width: 380px;
+    max-width: 400px;
     border-radius: .3em;
     border: none;
     overflow: hidden;
     background: $block-bg-transparent;
   }
-  .flip-card__front-side{
+  .welcome-card__front-side{
     width: 100%;
+    padding-top: 2.5em;
 
     .author-bio{
       display: flex;
@@ -79,6 +81,24 @@
     }
     &__item + .main-nav__item{
       border-left: 2px solid rgba($white, .5);
+    }
+  }
+  .welcome-card__back-side{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 2.5em;
+    .welcome-title{
+      color: $white;
+      margin-bottom: 1.15em;
+      @include title-underline;
+      &:after{
+        bottom: -15px;
+        background: $white;
+      }
+    }
+    .form__input-group{
+      padding:0 1.25em;
     }
   }
 }
