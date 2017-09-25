@@ -64,7 +64,7 @@
   cursor: pointer;
   background: $transparent;
   padding: 0;
-  z-index: 10;
+  z-index: 100;
   &__line,
   &:before,
   &:after{
@@ -94,14 +94,17 @@
   &.active{
     .menu-button__line {
       opacity: 0;
+      z-index: 150;
     }
     &:before{
+      z-index: 150;
       top: 50%;
       -webkit-transform: translateY(-50%) rotate(-45deg);
       -ms-transform: translateY(-50%) rotate(-45deg);
       transform: translateY(-50%) rotate(-45deg);
     }
     &:after{
+      z-index: 150;
       bottom: 50%;
       -webkit-transform: translateY(50%) rotate(45deg);
       -ms-transform: translateY(50%) rotate(45deg);

@@ -1,3 +1,12 @@
+mixin main-menu(active)
+    - var pages = {"Главная":"index.html", "Мои работы":"works.html", "Блог":"blog.html", "Обо мне":"about.html", "Авторизация":"/"}
+    nav.main-menu
+        ul.main-menu__content
+            - var i = 1
+            each p_url, p_title in pages
+                li.main-menu__item
+                    a(class="preload-link main-menu__link" + ((i++ == active) ? " active":""), href=p_url)=p_title
+
 
 mixin avatar
     .avatar
