@@ -30,6 +30,7 @@
   width: 100%;
   height: 100%;
   flex-direction: row;
+
   &__col {
     display: flex;
     width: 50%;
@@ -45,16 +46,25 @@
       position: relative;
       width: 50%;
       @include page-title;
-      color: $dark-grey;
-      background: url(../../img/svg/about_header.svg) no-repeat top center;
-      background-size: cover;
+      .page-title {
+        margin-bottom: 0;
+        padding: 1em 0;
+        color: $dark-grey;
+        background: url(../../img/svg/about_header.svg) no-repeat center;
+        background-size: contain;
+        &:after{
+          bottom: 30px;
+        }
+      }
     }
     &__author-box {
       width: 50%;
       @include page-title;
         color: $green-grey;
         margin-bottom: 2em;
-
+        .page-title{
+          margin-bottom: 60px;
+        }
     }
     &__author-photo{
       width: 100%;
@@ -65,6 +75,9 @@
         width: 100%;
         max-height: 400px;
 
+      }
+      .page-title{
+        margin-bottom: 60px;
       }
     }
     &__author-text{
@@ -148,6 +161,40 @@
       transform: translateY(-55%);
     }
   }
+  @include tablet{
+    flex-direction: column;
+    &__col{
+      width: 100%;
+      flex-direction: column;
+    }
+    .bio{
+      flex-direction: column;
+      justify-content: flex-start;
+      &__title-box,
+      &__author-box{
+        width: 100%;
+        padding: 0.25em 2em;
+      }
+      &__title-box{
+        .page-title{
+          padding: .5em 0;
+        }
+      }
+    }
+    .skills{
+      justify-content: center;
+      &__group-title{
+        text-align: center;
+      }
+    }
+    .skills__title-box{
+      width: 100%;
+    }
+    &__svg-corner{
+      bottom: -40px;
+      height: 100px;
+    }
+  }
 }
 .map-wrapper{
   display: flex;
@@ -200,6 +247,15 @@
         margin-right: .5em;
         width: 2em;
       }
+    }
+  }
+  @include tablet{
+    height: calc(100% + 150px);
+    min-height: 450px;
+    padding-top: 5em;
+    .contact-info{
+      justify-content: flex-start;
+      align-self: flex-start;
     }
   }
 }
