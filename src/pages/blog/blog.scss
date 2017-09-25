@@ -17,6 +17,7 @@
         }
         &__svg-bg{
             top: 55%;
+            width: 60%;
         }
     }
     .social-links{
@@ -42,7 +43,11 @@
         color: $white;
         font-family: 'Roboto';
     }
-
+    @include phone{
+        .site-header__svg-corner{
+            bottom: -20px;
+        }
+    }
 }
 .blog{
     display: flex;
@@ -52,6 +57,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
+    z-index: 20;
     .container{
         display: flex;
         width: 100%;
@@ -72,6 +79,7 @@
     }
     &__content{
         width: 70%;
+        transition: all $transition-time;
     }
     &__navigation-box{
         display: flex;
@@ -94,6 +102,7 @@
         color: $blog-text-color;
         width: 100%;
         padding: 1em 0;
+        transition: all $transition-time;
         &:hover,
         &:active,
         &.active{
@@ -129,10 +138,83 @@
             margin-bottom: 30px;
         }
         &__content{
-            p{
+            font-family: 'Roboto';
+            font-size: 1em;
+            color: $blog-text-color;
+            text-align: left;
+            margin-bottom: 1em;
+        }
+    }
+    &__navigation-toggle {
+        display: none;
+        cursor: pointer;
+    }
+    @include tablet{
+        &__navigation{
+            position: fixed;
+            float: none;
+            top: 0;
+            left: -80%;
+            bottom: 0;
+            z-index: 10;
+            width: 80%;
+            height: 100%;
+            background-color: $green;
+            transition: all $transition-time;
+            flex-direction: column;
+            padding: 4em 2em;
+            &.active {
+                left: 0;
+            }
+        }
+        &__navigation-box{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+        .links-list__item a{
+            justify-content: flex-end;
+            text-align: right;
+            font-family: 'Roboto';
+            color: rgba($white, .7);
+            &:hover,
+            &:active,
+            &.active{
+                font-family: 'Roboto-Bold';
+                color: $white;
+            }
+        }
+        &__navigation-toggle{
+            display: block;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            right: -30px;
+            height: 100px;
+            width: 100px;
+            margin-top: -60px;
+            border-radius: 50%;
+            background-color: $green;
+            .fa {
+                position: absolute;
+                color: $white;
+                opacity: .7;
+                top: 50%;
+                right: 10%;
+                line-height: 1;
+                transform: translateY(-50%);
+                font-size: em(20);
+                transition: transform $transition-time;
+                .active & {
+                    transform: translateY(-50%) rotateY(180deg);
+                }
+            }
+        }
+        .article{
+            &__content{
                 font-family: 'Roboto';
+                color: $green-grey;
                 font-size: 1em;
-                color: $blog-text-color;
                 text-align: left;
                 margin-bottom: 1em;
             }
