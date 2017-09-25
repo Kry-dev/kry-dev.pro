@@ -9,6 +9,9 @@
   //background-size: cover;
   .site-header__svg-corner{
     bottom: -100px;
+    @include phone{
+      bottom: -30px;
+    }
   }
   .go-down{
     bottom: 50px;
@@ -161,40 +164,49 @@
       transform: translateY(-55%);
     }
   }
-  @include tablet{
+@include tablet{
+  flex-direction: column;
+  &__col{
+    width: 100%;
     flex-direction: column;
-    &__col{
+  }
+  .bio{
+    flex-direction: column;
+    justify-content: flex-start;
+    &__title-box,
+    &__author-box{
       width: 100%;
-      flex-direction: column;
+      padding: 0.25em 2em;
     }
-    .bio{
-      flex-direction: column;
-      justify-content: flex-start;
-      &__title-box,
-      &__author-box{
-        width: 100%;
-        padding: 0.25em 2em;
-      }
-      &__title-box{
-        .page-title{
-          padding: .5em 0;
+    &__title-box{
+      .page-title{
+        padding: .5em 0;
+        &:after{
+          bottom:0;
         }
       }
     }
-    .skills{
-      justify-content: center;
-      &__group-title{
-        text-align: center;
-      }
-    }
-    .skills__title-box{
-      width: 100%;
-    }
-    &__svg-corner{
-      bottom: -40px;
-      height: 100px;
+  }
+  .skills{
+    justify-content: center;
+    &__group-title{
+      text-align: center;
     }
   }
+  .skills__title-box{
+    width: 100%;
+  }
+  .site-header__svg-corner{
+    bottom: -40px;
+    height: 100px;
+  }
+
+}
+@include phone{
+  .site-header__svg-corner{
+    height: 100px;
+  }
+}
 }
 .map-wrapper{
   display: flex;
@@ -257,5 +269,9 @@
       justify-content: flex-start;
       align-self: flex-start;
     }
+  }
+  @include  phone{
+    height: calc(100% + 150px);
+    min-height: 300px;
   }
 }
