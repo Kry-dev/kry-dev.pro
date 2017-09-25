@@ -1,1 +1,0 @@
-webpackJsonp([2],{26:function(n,o,c){"use strict";c(0),c(27),c(1),console.log("in blog.js")},27:function(n,o){}},[26]);
