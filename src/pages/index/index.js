@@ -3,5 +3,6 @@ import './index.scss';
 require('font-awesome/css/font-awesome.css');
 console.log('in index.js');
 import '../../js/_flip-card.js';
+import '../../js/water-effect/index-water.js';
 
 

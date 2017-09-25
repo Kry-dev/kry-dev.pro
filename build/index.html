@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Yaroslav Kryvda personal portfolio</title>
+  <link href="./css/common.css" rel="stylesheet"><link href="./css/index.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper welcome-wrapper">
+      <div class="watter-bg">
+        <canvas class="watter-bg-canvas"></canvas>
+      </div>
+      <header class="welcome-header">
+        <button class="btn btn--transparent" id="flip-card">Авторизоваться</button>
+      </header>
+      <section class="main welcome-main">
+        <div class="welcome-card flip-container">
+          <div class="welcome-card__front-side">
+            <div class="author-bio">
+              <div class="avatar"><img src="../img/my_photo.jpg" title="Кривда Ярослав - Frontend developer" alt="Кривда Ярослав - Frontend developer"></div>
+              <div class="author-bio__name">Ярослав Кривда</div>
+              <div class="author-bio__description">Frontend Developer</div>
+              <ul class="social-links">
+                <li class="social-links__item"><a class="social-links__link fa fa-vk" href="http://vk.com/id5593980" target="_blank"></a></li>
+                <li class="social-links__item"><a class="social-links__link fa fa-github-alt" href="https://github.com/Kry-dev" target="_blank"></a></li>
+                <li class="social-links__item"><a class="social-links__link fa fa-instagram" href="https://www.instagram.com/yarikkrivda/" target="_blank"></a></li>
+                <li class="social-links__item"><a class="social-links__link fa fa-linkedin" href="https://ru.linkedin.com/in/yaroslav-kryvda-32b88485/" target="_blank"></a></li>
+              </ul>
+              <ul class="main-nav">
+                <li class="main-nav__item"><a class="btn" href="works.html">Мои работы</a></li>
+                <li class="main-nav__item"><a class="btn" href="about.html">Обо мне</a></li>
+                <li class="main-nav__item"><a class="btn" href="blog.html">Блог</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="welcome-card__back-side">
+            <h3 class="welcome-title welcome-title__card">Авторизуйтесь</h3>
+            <form class="form form__login" method="post">
+              <div class="form__input-group"><span class="form__input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input class="form__input form--login__input" id="login" name="login" type="text" placeholder="Логин">
+              </div>
+              <div class="form__input-group"><span class="form__input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+                <input class="form__input form--login__input" id="password" name="password" type="password" placeholder="Пароль">
+              </div>
+              <div class="form__input-group form__input-group--checkbox">
+                <input class="checkbox-custom" id="ishuman" name="ishuman" type="checkbox">
+                <label class="checkbox-custom-label" for="ishuman">Я человек</label>
+              </div>
+              <div class="form__text">Вы точно не робот?</div>
+              <div class="form__input-group form__input-group--radios">
+                <div class="form__radio">
+                  <input class="radio-custom" id="notrobot-yes" name="notrobot" type="radio" value="yes">
+                  <label class="radio-custom-label" for="notrobot-yes">Да</label>
+                </div>
+                <div class="form__radio">
+                  <input class="radio-custom" id="notrobot-no" name="notrobot" type="radio" value="no">
+                  <label class="radio-custom-label" for="notrobot-no">Не уверен</label>
+                </div>
+              </div>
+              <nav class="welcome-card__welcome-nav">
+                <ul class="main-nav">
+                  <li class="main-nav__item"><a class="btn" id="unflip-card" href="/index.html">На главную</a></li>
+                  <li class="main-nav__item">
+                    <input class="btn" type="submit" id="login-btn" value="Войти">
+                  </li>
+                </ul>
+              </nav>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer class="footer welcome-footer">
+        <div class="copyright-row">
+          <div class="copyright">© Кривда Ярослав</div>
+          <div class="copyright">Front-end developer</div>
+          <div class="copyright">2017</div>
+        </div>
+      </footer>
+    </div>
+  <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/index.js"></script></body>
+</html>

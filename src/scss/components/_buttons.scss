@@ -47,6 +47,11 @@
       color: $green;
     }
   }
+  @include phone{
+    .social-links__link{
+      color: $white;
+    }
+  }
 }
 
 
@@ -103,6 +108,15 @@
       transform: translateY(50%) rotate(45deg);
     }
   }
+  @include phone{
+    height: 23px;
+    width: 26px;
+    &__line,
+    &:before,
+    &:after{
+      height: 3px;
+    }
+  }
 }
 .go-down,
 .go-up {
@@ -123,9 +137,18 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 2.25em;
-  &:hover {
+  &:hover,
+  &:active{
     padding-top: 10px;
     bottom: 290px;
+  }
+  @include phone{
+    bottom: 160px;
+    &:hover,
+    &:active{
+      padding-top: 10px;
+      bottom: 150px;
+    }
   }
 }
 

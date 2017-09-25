@@ -61,6 +61,7 @@ module.exports = {
         jQuery: "jquery"
     }),
   ],
+  devtool:"source-map",
   module: {
     rules: [
       {
@@ -85,12 +86,24 @@ module.exports = {
         }),
       },
       {
-          test: /\.js$/,
-          enforce: 'pre',
-          loader: 'eslint-loader',
-          options: {
-              fix: true,
-          },
+        test: /\.js$/,
+        enforce: 'pre',
+        loader: 'eslint-loader',
+        options: {
+            fix: true,
+        },
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader',
+        query: {
+            presets: ['es2015']
+        }
+      },
+      {
+        test: /\.(frag|vert)$/,
+        loader: 'webpack-glsl-loader'
       },
       {
         test: /\.(jpg|png|svg)$/,
@@ -101,19 +114,19 @@ module.exports = {
             outputPath: './img/'
         },
       },
-        {
-          test: /\.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
-          use: [
-            {
-              loader: 'file-loader',
-              query: {
-                name:'fonts/[name].[ext]',
-                publicPath: '.',
-                outputPath: './fonts/'
-              }
+      {
+        test: /\.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            query: {
+              name:'fonts/[name].[ext]',
+              publicPath: '.',
+              outputPath: './fonts/'
             }
-          ]
-        },
+          }
+        ]
+      },
 
     ],
   },

@@ -27,6 +27,9 @@
     left: 50%;
     margin-left: -45px;
     background: $dark-grey;
+    @include phone {
+      bottom: -20px;
+    }
   }
 }
 //page title
@@ -41,8 +44,29 @@
 
 //RESPONSIVE
 
-@mixin tablets() {
+// media
+@mixin wide() {
+  @media screen and (min-width: 1601px) {
+    @content;
+  }
+}
+@mixin desktop() {
+  @media screen and (max-width: 1600px) {
+    @content;
+  }
+}
+@mixin laptop() {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+@mixin tablet() {
   @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin phone() {
+  @media screen and (max-width: 480px) {
     @content;
   }
 }
